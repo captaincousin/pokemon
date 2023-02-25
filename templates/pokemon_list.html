@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p>Página de Pokemon Funcionando Correctamente!</p>
+    <h1>Lista de Pokemons</h1>
+    <ul>
+    {% for pokemon in pokemons %}
+        <li>{{ pokemon.nombre }} - {{ pokemon.tipo }} - {{ pokemon.nivel }}</li>
+    {% empty %}
+        <li>No hay pokemons registrados.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

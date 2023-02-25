@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p>Página de Entrenadores Funcionando Correctamente!</p>
+    <h1>Lista de Entrenadores</h1>
+    <ul>
+    {% for entrenador in entrenadores %}
+        <li>{{ entrenador.nombre }} - {{ entrenador.edad }} - {{ entrenador.ciudad_natal }}</li>
+    {% empty %}
+        <li>No hay entrenadores registrados.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

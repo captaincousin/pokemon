@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p>Página de Gimnasios Funcionando Correctamente!</p>
+    <h1>Lista de Gimnasios</h1>
+    <ul>
+    {% for gimnasio in gimnasios %}
+        <li>{{ gimnasio.nombre }} - {{ gimnasio.ciudad }} - {{ gimnasio.lider }}</li>
+    {% empty %}
+        <li>No hay gimnasios registrados.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
